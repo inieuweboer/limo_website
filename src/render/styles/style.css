@@ -1,0 +1,52 @@
+/* Fixed navbar requires padding */
+body {
+  padding-top: 70px;
+}
+
+/* Tables without separators. */
+.table th, .table td {
+  border-top: none !important;
+}
+
+#s1 {
+  display: none;
+}
+
+#s1 a {
+  padding: 7em 0.5em 7em 0.5em;
+}
+
+#s1 a img {
+  width: 15em;
+  max-height: 15em;
+}
+
+#limo-navbar {
+  line-height: 60px;
+}
+
+#limo-navbar img {
+  max-width: 15em;
+  padding: 0em 1em 0em 0em;
+
+  vertical-align: middle;
+}
+
+#nsa-navbar {
+  line-height: 60px;
+}
+
+#nsa-navbar img {
+  max-width: 15em;
+  padding: 0em 0.5em 0em 0.5em;
+
+  vertical-align: middle;
+}
+
+#limo-logo {
+  max-width: 20em;
+}
+
+p.function {
+     font-style: italic;
+}

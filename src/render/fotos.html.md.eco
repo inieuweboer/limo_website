@@ -1,0 +1,25 @@
+---
+title: "Foto's"
+isPage: true
+showLogo: false
+order: 7
+---
+
+### Foto's
+
+<div class="row">
+  <% folder = 'img/fotos/'; %>
+  <% thumbs_folder = '/img/fotos_thumb/'; %>
+
+  <% # Loop over photos %>
+  <% for file in @getFilesAtPath(relativeOutDirPath: folder).toJSON() : %>
+      <span class="col-sm-3"> <% #really weird how it acts with div instead of span %>
+
+        <% # Element per photo %>
+        <a href="<%= @getUrl(file) %>">
+          <img class="img-responsive gallery-foto" src="<%= @site.url + thumbs_folder + file.basename + '.JPG' %>" alt="<%= file.basename %>" />
+        </a>
+        <% console.log file %>
+      </span>
+  <% end %>
+</div>

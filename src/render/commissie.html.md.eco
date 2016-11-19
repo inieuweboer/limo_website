@@ -1,0 +1,40 @@
+---
+title: "Commissie"
+isPage: true
+showLogo: false
+order: 8
+---
+
+### Commissie
+
+De LIMO-commissie is dit jaar als volgt samengesteld:
+
+<div class="row">
+  <% # Loop across committee members defined in docpad.coffee %>
+  <% for item in @committee_list: %>
+    <span class="col-sm-3"> <% #really weird how it acts with div instead of span %>
+
+      <img class="img-responsive commissie-foto" src="<%- "img/commissie/#{item.abbr}.JPG"%>" alt="<%- item.abbr%>" />
+      <p class="name text-center">
+        <%- item.name %>
+        -
+        <em>
+          <%- item.func %>
+        </em>
+      </p>
+    </span>
+  <% end %>
+</div>
+
+<div class="row">
+  <div class="col-sm-10 col-sm-offset-1">
+    <img id="groep" class="img-responsive commissie-foto" src="img/commissie/groep.JPG" alt="groep" />
+    <p>
+    De LIMO-commissie, met een paar van onze helpers: Jolien Kerssens, Floor Broekgaarden, en Claartje Ottens.
+    </p>
+    <p>
+    Hartelijk dank aan de KODAK (fotocommissie van de NSA) voor het mogelijk maken van deze foto's!
+    </p>
+  </div>
+</div>
+
